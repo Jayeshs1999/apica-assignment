@@ -23,11 +23,12 @@ const Header = ({ openDrawer, setOpenDrawer }: HeaderProps) => {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
+            onClick={() => {
+              setOpenDrawer(!openDrawer);
+            }}
           >
             <MenuIcon
-              onClick={() => {
-                setOpenDrawer(!openDrawer);
-              }}
+             
             />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
