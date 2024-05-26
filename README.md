@@ -1,15 +1,22 @@
-# Getting Started with Create React App
+# APICA Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Available Scripts
 
-## Available Scripts
-
+## To Run Project Locally use below command
 In the project directory, you can run:
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## Run Storybook(Reusable Component Library) Locally
+In the project directory, you can run:
+
+### `npm run storybook`
+
+Note: To run storybook, node.js version should we greater than 18
+
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
