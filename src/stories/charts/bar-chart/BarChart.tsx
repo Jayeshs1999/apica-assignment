@@ -13,7 +13,7 @@ export const BarChart = ({ chartData ,isPreview,handleFullScreenChart}:BarChartP
   return (
     <div className="chart-container" style={{background:'lavender',borderRadius:'20px',padding:'20px'}}>
       <div style={{display:'flex',justifyContent:"space-between",alignItems:'centers',cursor:'pointer'}}>
-        <h2 style={{ textAlign: "start" }} >Line Chart</h2>
+        <h2 style={{ textAlign: "start" }} >Bar Chart</h2>
         <FullscreenIcon style={{visibility:!isPreview? 'visible':'hidden' }} onClick={()=>{handleFullScreenChart && handleFullScreenChart('bar')}} />
       </div>
       <Bar
