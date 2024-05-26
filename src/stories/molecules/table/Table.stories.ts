@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
 import DataTable from "./Table";
 
 const meta = {
@@ -12,9 +11,6 @@ const meta = {
     layout: "fullscreen",
   },
   args: {
-    // setOpenDrawer: fn(),
-    // onLogout: fn(),
-    // onCreateAccount: fn(),
   },
 } satisfies Meta<typeof DataTable>;
 
@@ -111,5 +107,3 @@ export const LoggedIn: Story = {
     },
   },
 };
-
-// export const LoggedOut: Story = {};

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
+import { DataGrid, GridColDef } from "@mui/x-data-grid";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 70 },
@@ -36,10 +36,10 @@ interface DataTableProps {
 
 export default function DataTable({ data, paginationData }: DataTableProps) {
   const pageOptions = paginationData?.pageOptions;
-  console.log("data:", paginationData);
 
   return (
     <div style={{ height: 400, width: "100%" }}>
+      <h2>Table</h2>
       <DataGrid
         rows={data}
         rowCount={paginationData?.totalCount}
@@ -50,7 +50,6 @@ export default function DataTable({ data, paginationData }: DataTableProps) {
           },
         }}
         pageSizeOptions={pageOptions}
-        // checkboxSelection
       />
     </div>
   );

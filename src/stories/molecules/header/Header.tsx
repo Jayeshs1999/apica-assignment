@@ -13,7 +13,6 @@ interface HeaderProps {
 }
 
 const Header = ({ openDrawer, setOpenDrawer }: HeaderProps) => {
-  console.log("openDrawer :", openDrawer);
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -27,7 +26,6 @@ const Header = ({ openDrawer, setOpenDrawer }: HeaderProps) => {
           >
             <MenuIcon
               onClick={() => {
-                console.log("openDrawer :", openDrawer);
                 setOpenDrawer(!openDrawer);
               }}
             />
