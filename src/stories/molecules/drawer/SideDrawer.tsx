@@ -6,13 +6,17 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 
-
 interface SideDrawerProps {
   open: boolean;
   setOpen: (action: boolean) => void;
+  handleMenuItem: (action: string) => void;
 }
 
-export default function SideDrawer({ open, setOpen }: SideDrawerProps) {
+export default function SideDrawer({
+  open,
+  setOpen,
+  handleMenuItem,
+}: SideDrawerProps) {
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
   };
@@ -23,7 +27,12 @@ export default function SideDrawer({ open, setOpen }: SideDrawerProps) {
         {["Overview", "Report", "Analytics", ""].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
-              <ListItemText primary={text} />
+              <ListItemText
+                primary={text}
+                onClick={() => {
+                  handleMenuItem(text);
+                }}
+              />
             </ListItemButton>
           </ListItem>
         ))}

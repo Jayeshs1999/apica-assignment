@@ -10,9 +10,10 @@ import SideDrawer from "../drawer/SideDrawer";
 interface HeaderProps {
   openDrawer: boolean;
   setOpenDrawer: (action: boolean) => void;
+  handleMenuItem: (action: string) => void;
 }
 
-const Header = ({ openDrawer, setOpenDrawer }: HeaderProps) => {
+const Header = ({ openDrawer, setOpenDrawer, handleMenuItem }: HeaderProps) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -27,16 +28,18 @@ const Header = ({ openDrawer, setOpenDrawer }: HeaderProps) => {
               setOpenDrawer(!openDrawer);
             }}
           >
-            <MenuIcon
-             
-            />
+            <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             APICA
           </Typography>
         </Toolbar>
       </AppBar>
-      <SideDrawer open={openDrawer} setOpen={() => setOpenDrawer(false)} />
+      <SideDrawer
+        open={openDrawer}
+        setOpen={() => setOpenDrawer(false)}
+        handleMenuItem={handleMenuItem}
+      />
     </Box>
   );
 };

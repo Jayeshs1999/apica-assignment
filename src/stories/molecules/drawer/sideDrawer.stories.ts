@@ -24,6 +24,7 @@ type Story = StoryObj<typeof meta>;
 export const LoggedIn: Story = {
   args: {
     open: true,
+    handleMenuItem: (action) => {},
   },
 };
 
